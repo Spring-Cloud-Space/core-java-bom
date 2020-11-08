@@ -8,30 +8,37 @@
 
     <groupId>com.yulikexuan</groupId>
     <artifactId>core-java-bom</artifactId>
-    <version>2020.04.07</version>
+    <version>2020.04.09</version>
     <packaging>pom</packaging>
 
     <developers>
         <developer>
             <name>yulikexuan</name>
-            <organization>JavaLab</organization>
+            <organization>Java-Lab</organization>
         </developer>
     </developers>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>15</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <javax-jaxb.version>2.3.1</javax-jaxb.version>
+        <guava.version>30.0-jre</guava.version>
+        <apache.commons.lang3.version>3.11</apache.commons.lang3.version>
         <lombok.version>1.18.16</lombok.version>
+        <slf4j-api.version>1.7.30</slf4j-api.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
         <junit.version>5.7.0</junit.version>
         <mockito.version>3.6.0</mockito.version>
         <assertj.version>3.18.0</assertj.version>
         <awaitility.version>4.0.3</awaitility.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -54,6 +61,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
                 <version>${mapstruct.version}</version>
@@ -63,13 +76,13 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>30.0-jre</version>
+                <version>${guava.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.11</version>
+                <version>${apache.commons.lang3.version}</version>
             </dependency>
 
             <dependency>
@@ -121,6 +134,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
 
         <dependency>
@@ -219,7 +237,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
+                    <version>${maven-compiler-plugin.version}</version>
                     <configuration>
                         <release>${java.version}</release>
                         <source>${maven.compiler.source}</source>
@@ -247,8 +265,9 @@
                 </plugin>
 
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M5</version>
+                    <version>${maven-surefire-plugin.version}</version>
                     <configuration>
                         <testFailureIgnore>false</testFailureIgnore>
                         <reuseForks>false</reuseForks>
@@ -269,7 +288,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>3.0.0-M5</version>
+                    <version>${maven-failsafe-plugin.version}</version>
                     <configuration>
                         <includes>
                             <include>**/*IT.java</include>
@@ -294,7 +313,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0-M3</version>
+                    <version>${maven-enforcer-plugin.version}</version>
                     <executions>
                         <execution>
                             <id>enforce-versions</id>
@@ -307,7 +326,7 @@
                                         <version>[3.6.3,)</version>
                                     </requireMavenVersion>
                                     <requireJavaVersion>
-                                        <version>14</version>
+                                        <version>${java.version}</version>
                                     </requireJavaVersion>
                                     <requireReleaseDeps>
                                         <onlyWhenRelease>true</onlyWhenRelease>
@@ -350,6 +369,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>14</source>
+                    <target>14</target>
+                </configuration>
             </plugin>
 
         </plugins>
