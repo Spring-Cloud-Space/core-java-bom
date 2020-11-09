@@ -8,7 +8,7 @@
 
     <groupId>com.yulikexuan</groupId>
     <artifactId>core-java-bom</artifactId>
-    <version>2020.04.12</version>
+    <version>2020.04-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <developers>
@@ -434,6 +434,11 @@
             <id>packagecloud.releases</id>
             <url>packagecloud+https://packagecloud.io/cloudlab/release</url>
         </repository>
+
+        <snapshotRepository>
+            <id>packagecloud.releases</id>
+            <url>packagecloud+https://packagecloud.io/cloudlab/release</url>
+        </snapshotRepository>
 
     </distributionManagement>
 
