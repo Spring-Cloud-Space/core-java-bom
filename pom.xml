@@ -8,7 +8,7 @@
 
     <groupId>com.yulikexuan</groupId>
     <artifactId>core-java-bom</artifactId>
-    <version>2020.04-SNAPSHOT</version>
+    <version>2021.01-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <developers>
@@ -29,7 +29,7 @@
         <apache.commons.lang3.version>3.11</apache.commons.lang3.version>
         <commons-io.version>2.8.0</commons-io.version>
         <commons-csv.version>1.8</commons-csv.version>
-        <commons-collections.version>3.2.2</commons-collections.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
         <commons-codec.version>1.15</commons-codec.version>
         <commons-math3.version>3.6.1</commons-math3.version>
         <lombok.version>1.18.16</lombok.version>
@@ -125,9 +125,9 @@
             </dependency>
 
             <dependency>
-                <groupId>commons-collections</groupId>
-                <artifactId>commons-collections</artifactId>
-                <version>${commons-collections.version}</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
             </dependency>
 
             <dependency>
@@ -215,6 +215,16 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
         </dependency>
 
         <dependency>
