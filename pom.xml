@@ -37,7 +37,7 @@
         <logback-classic.version>1.2.3</logback-classic.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
         <junit.version>5.7.0</junit.version>
-        <mockito.version>3.6.0</mockito.version>
+        <mockito.version>3.8.0</mockito.version>
         <assertj.version>3.18.0</assertj.version>
         <awaitility.version>4.0.3</awaitility.version>
         <awaitility-proxy.version>3.1.6</awaitility-proxy.version>
