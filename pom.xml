@@ -8,7 +8,7 @@
 
     <groupId>com.yulikexuan</groupId>
     <artifactId>core-java-bom</artifactId>
-    <version>2021.01-SNAPSHOT</version>
+    <version>2021.03-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <developers>
@@ -32,7 +32,7 @@
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-codec.version>1.15</commons-codec.version>
         <commons-math3.version>3.6.1</commons-math3.version>
-        <lombok.version>1.18.16</lombok.version>
+        <lombok.version>1.18.20</lombok.version>
         <slf4j-api.version>1.7.30</slf4j-api.version>
         <logback-classic.version>1.2.3</logback-classic.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
