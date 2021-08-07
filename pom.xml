@@ -12,10 +12,12 @@
     <packaging>pom</packaging>
 
     <developers>
+
         <developer>
             <name>yulikexuan</name>
             <organization>Java-Lab</organization>
         </developer>
+
     </developers>
 
     <properties>
@@ -25,27 +27,28 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <javax-jaxb.version>2.3.1</javax-jaxb.version>
-        <guava.version>30.0-jre</guava.version>
-        <apache.commons.lang3.version>3.11</apache.commons.lang3.version>
-        <commons-io.version>2.8.0</commons-io.version>
-        <commons-csv.version>1.8</commons-csv.version>
+        <jaxb-core.version>3.0.2</jaxb-core.version>
+        <guava.version>30.1.1-jre</guava.version>
+        <apache.commons.lang3.version>3.12.0</apache.commons.lang3.version>
+        <commons-io.version>2.11.0</commons-io.version>
+        <commons-csv.version>1.9.0</commons-csv.version>
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-codec.version>1.15</commons-codec.version>
         <commons-math3.version>3.6.1</commons-math3.version>
         <lombok.version>1.18.20</lombok.version>
-        <slf4j-api.version>1.7.30</slf4j-api.version>
-        <logback-classic.version>1.2.3</logback-classic.version>
-        <mapstruct.version>1.4.1.Final</mapstruct.version>
-        <junit.version>5.7.0</junit.version>
-        <mockito.version>3.8.0</mockito.version>
-        <assertj.version>3.18.0</assertj.version>
-        <awaitility.version>4.0.3</awaitility.version>
+        <slf4j-api.version>1.7.32</slf4j-api.version>
+        <logback-classic.version>1.2.5</logback-classic.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <junit.version>5.8.0-M1</junit.version>
+        <mockito.version>3.11.2</mockito.version>
+        <assertj.version>3.20.2</assertj.version>
+        <awaitility.version>4.1.0</awaitility.version>
         <awaitility-proxy.version>3.1.6</awaitility-proxy.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
-        <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
+        <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -61,7 +64,7 @@
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-core</artifactId>
-                <version>2.3.0.1</version>
+                <version>${jaxb-core.version}</version>
             </dependency>
 
             <dependency>
